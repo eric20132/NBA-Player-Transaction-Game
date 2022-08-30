@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Hawk.html</title>
+        <link rel=stylesheet type="text/css" href="css/slider.css">
+        <script src = "hawk.js"></script>
+        <style>
+            @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+            body {
+                margin: 0;
+                background-image: url("picture/background/background.jpg");
+                background-position-x:55px;
+                /*background-repeat: no-repeat;*/
+            }
+            .menu{
+                z-index: 5;
+                overflow: hidden;
+                background-color: dimgrey;
+                width : 100%;
+                height:40px;
+            }
+
+            .menu a{
+                float: left;
+                display: block;
+                color: white;
+                padding: 10px 40px 20px 30px;
+                text-decoration: none;
+                font-family: 微軟正黑體,新細明體,標楷體;
+                font-weight: bold;
+                font-size: 17px;
+                text-align: center;
+            }
+
+            .menu a:hover{
+                background-color: black;
+            }
+
+            .court{
+                z-index:1;
+                position: absolute;
+                width : 1500px;
+                height: 800px;
+                top : 80px;
+                left:210px;
+            }
+            .score{
+                position: absolute;
+                left:770px;
+                top : 900px;
+                font-family: 'cwTeXYen', sans-serif;
+                font-size:40px;
+                font-weight: 500;
+            }
+            .ball_1{
+                z-index:999;
+                position: absolute;
+                width:460px;
+                left : 370px;
+                top : 130px;
+            }
+            .ball_2{
+                z-index :999;
+                position: absolute;
+                width:630px;
+                left : 315px;
+                top:500px;
+            }
+            .ball_3{
+                z-index :999;
+                position: absolute;
+                width:600px;
+                left : 1000px;
+                top : 505px;
+            }
+            .ball_4{
+                z-index :999;
+                position: absolute;
+                width:290px;
+                left : 1130px;
+                top : 200px;
+            }
+            .ball_5{
+                z-index :999;
+                position: absolute;
+                width:300px;
+                left : 800px;
+                top:370px;
+            }
+            .Hi{
+                position: absolute;
+                font-family: 'cwTeXYen', sans-serif;
+                left:50px;
+                font-size:20px;
+                font-weight: 500;
+                color:firebrick;
+            }
+        </style>
+        <embed src="music.mp3" autostart=true hidden=true loop=true>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="Home.html">首頁</a>
+            <a href="Player.html">老鷹隊</a>
+            <a href="Hawk.html">球員交易</a>
+        </div>
+        <img class = "court" src = "picture/123.jpg">
+        <img id = "1" name = "lin.jpg" class = "ball_1" src = "picture/Ball.png" >
+        <img id = "2" name = "young.PNG" class = "ball_2" src = "picture/ball_2.png" >
+        <img id = "3" name = "carter.jpg" class = "ball_3" src = "picture/ball_3.png">
+        <img id = "4" name = "collins2.PNG" class = "ball_4" src = "picture/ball_4.png">
+        <img id = "5" name = "dedmon.PNG" class = "ball_5" src = "picture/ball_5.png">
+
+        <br>
+        <p class = "Hi">PG</p>
+            <br><br><br>
+            <form>
+                <select name="PG" id="PG" >
+                    <option value="curry.PNG">Steven Curry</option>
+                    <option value="irving.PNG">Kyrie Irving</option>
+                    <option value="lin.jpg">Jeremy Lin </option>
+                    <option value="walker.PNG">Kemba Walker</option>
+                </select>
+                <input type="button" value="交易" id="summit_PG">
+            </form>
+
+            <p class = "Hi">SG</p>
+            <br><br><br><br>
+
+            <form>
+                <select name="SG" id="SG" >
+                    <option value="CJ.PNG">CJ McCollum</option>
+                    <option value="butler.PNG">Jimmy Butler</option>
+                    <option value="young.PNG">Trae Young</option>
+                    <option value="harden.PNG">James Harden</option>
+                </select>
+                <input type="button" value="交易" id="summit_SG">
+            </form>
+
+            <p class = "Hi">SF</p>
+            <br><br><br><br>
+
+            <form>
+                <select name="SF" id="SF" >
+                    <option value="lebron.PNG">LeBron James</option>
+                    <option value="durant.PNG">Kevin Durant</option>
+                    <option value="leonard.PNG">Kawhi Leonard</option>
+                    <option value="carter.PNG">Vince Carter</option>
+                </select>
+                <input type="button" value="交易" id="summit_SF">
+            </form>
+            <p class = "Hi">PF</p>
+            <br><br><br><br>
+
+            <form>
+                <select name="PF" id="PF" >
+                    <option value="davis.PNG">Anthony Davis</option>
+                    <option value="LOVE.PNG">Kevin Love</option>
+                    <option value="collins2.PNG">John Collins</option>
+                    <option value="green.PNG">Draymond Green</option>
+                </select>
+                <input type="button" value="交易" id="summit_PF">
+            </form>
+            <p class = "Hi">C</p>
+            <br><br><br><br>
+
+            <form>
+                <select name="C" id="C" >
+                    <option value="drummond.PNG">Andre Drummond</option>
+                    <option value="horford.PNG">Al Horford</option>
+                    <option value="adams.PNG">Steven Adams</option>
+                    <option value="dedmon.PNG">Dewayne Dedmon</option>
+                </select>
+                <input type="button" value="交易" id="summit_C">
+            </form>
+
+
+        <div class = "score">目前總分 : <span id = "total"></span></div>
+        
+    </body>
+</html>
